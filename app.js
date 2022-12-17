@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-const port_number = process.env.PORT || 3000;
+const port_num = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
@@ -10,4 +10,4 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(port_number);
+app.listen(port_num);
